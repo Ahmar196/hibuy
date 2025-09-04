@@ -42,14 +42,12 @@ extension MediaQueryValues on BuildContext {
   EdgeInsets responsivePadding({
     double horizontal = 0.0,
     double vertical = 0.0,
-  }) =>
-      EdgeInsets.symmetric(
-        horizontal: screenWidth * horizontal,
-        vertical: screenHeight * vertical,
-      );
+  }) => EdgeInsets.symmetric(
+    horizontal: screenWidth * horizontal,
+    vertical: screenHeight * vertical,
+  );
 
-  EdgeInsets responsiveAll(double value) =>
-      EdgeInsets.all(screenWidth * value);
+  EdgeInsets responsiveAll(double value) => EdgeInsets.all(screenWidth * value);
 
   /// Minimum size constraint helper
   double minWidth(double min) => screenWidth < min ? min : screenWidth;

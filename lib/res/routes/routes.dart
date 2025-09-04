@@ -3,6 +3,7 @@ import 'package:hibuy/res/routes/routes_name.dart';
 import 'package:hibuy/view/bottom_navigation_bar/bottom_nab_bar.dart';
 import 'package:hibuy/view/dashboard_screen/addproduct_screen.dart';
 import 'package:hibuy/view/dashboard_screen/dashboard_home_screen.dart';
+import 'package:hibuy/view/dashboard_screen/order_detail_screen.dart';
 import 'package:hibuy/view/profile_information.dart/bank_account_screen.dart';
 import 'package:hibuy/view/profile_information.dart/business_verification_screen.dart';
 import 'package:hibuy/view/profile_information.dart/document_verification_screen.dart';
@@ -33,6 +34,8 @@ class AppRoutes {
       // profile
        case RoutesName.KycMain:
       return MaterialPageRoute(builder: (BuildContext context) =>  KycMain());
+      case RoutesName.orderDetailScreen:
+      return MaterialPageRoute(builder: (BuildContext context) =>  OrderDetailScreen());
         case RoutesName.personalinformation:
       return MaterialPageRoute(builder: (BuildContext context) =>  PersonalInfoScreen());
         case RoutesName.BankAccountVerification:

@@ -24,19 +24,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       key: const Key('CustomAppBar'),
       leading: CupertinoButton(
         padding: EdgeInsets.zero,
+        onPressed: onBack ?? () => Navigator.pop(context),
         child: Icon(
           Icons.arrow_back,
           color: AppColors.textspan,
           size: context.widthPct(0.05), // responsive icon size
         ),
-        onPressed: onBack ?? () => Navigator.pop(context),
       ),
-      middle: Text(
-        title,
-        style: AppTextStyles.h4(context).copyWith(
-        
-        ),
-      ),
+      middle: Text(title, style: AppTextStyles.h4(context).copyWith()),
       previousPageTitle: previousPageTitle,
       transitionBetweenRoutes: transitionBetweenRoutes,
       heroTag: "CustomAppBar",

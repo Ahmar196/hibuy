@@ -6,16 +6,13 @@ class RoutesName {
   static const String SignupScreen = 'SignupScreen';
   // profile
   static const String KycMain = 'KycMain';
-  static const String personalinformation= 'personalinformation';
-  static const String BankAccountVerification= 'BankAccountVerification';
-  static const String BusinessVerification= 'BusinessVerification';
-  static const String DocumentVerification= 'DocumentVerification';
+  static const String personalinformation = 'personalinformation';
+  static const String BankAccountVerification = 'BankAccountVerification';
+  static const String BusinessVerification = 'BusinessVerification';
+  static const String DocumentVerification = 'DocumentVerification';
   static const String MyStoreInformation = 'MyStoreInformation';
-   static const String bottomnabBar = 'BottomNabBar';
-   static const String addproductscreen= 'addproductscreen';
+  static const String bottomnabBar = 'BottomNabBar';
+  static const String addproductscreen = 'addproductscreen';
 
-
-
-
-
+  static const String orderDetailScreen = 'order_detail_screen';
 }

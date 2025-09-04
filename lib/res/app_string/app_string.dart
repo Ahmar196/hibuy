@@ -97,6 +97,36 @@ class AppStrings {
   static const note ="Note: For best quality, upload images with a resolution of .";
   static const spantext ="1080 × 1080 pixels";
 
-
+  static const orderDetails = "Order Details";
+  static const video = "Video";
+  static const uploadVideo = "Upload Video (Max 20MB)";
+  static const weight = "Weight (kg)";
+  static const size = "Size";
+  static const enterHere = "Enter here";
+  static const sizeHint = "2 by 4";
+  static const selectOption = "Select option";
+  static const submit = "Submit";
+  static const productDetails = "Product Details";
+  static const customer = "Customer";
+  static const contact = "Contact";
+  static const items = "Items";
+  static const date = "Date";
+  static const total = "Total";
+  static const deliveryFee = "Delivery Fee";
+  static const grandTotal = "Grand Total";
+  static const deliveryAddress = "Address";
+  static const riderDetails = "Rider Details";
+  static const rider = "Rider";
+  static const deliveryStatus = "Delivery Status";
+  static const vehicleNumber = "Vehicle #";
+  static const contactNumber = "Contact #";
+  static const riderEmail = "Email";
+  static const unitPrice = "Unit Price";
+  static const subtotal = "Subtotal";
+  static const qty = "Qty";
+  static const rs = "Rs.";
+  static const inProgress = "In Progress";
+  static const option1 = "Option 1";
+  static const option2 = "Option 2";
 
 }

@@ -56,7 +56,7 @@ class BusinessVerificationScreen extends StatelessWidget {
             SizedBox(height: context.heightPct(0.015)),
             const ReusableTextField(
               hintText: AppStrings.enterhere,
-              labelText: AppStrings.address,
+              labelText: AppStrings.deliveryAddress,
             ),
             SizedBox(height: context.heightPct(0.015)),
             const ReusableTextField(

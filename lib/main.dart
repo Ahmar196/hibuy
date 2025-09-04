@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       // builder: DevicePreview.appBuilder,
       // locale: DevicePreview.locale(context),
 
-      initialRoute: RoutesName.splash,
+      initialRoute: RoutesName.orderDetailScreen,
       onGenerateRoute: AppRoutes.generateRoute,
     );
   }
