@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+
+class AppStrings {
+  // Authentication Strings
+  static const WelcometoHiBuyO = "Welcome to HiBuyO";
+  static const SelectStoreType = "Select Store Type";
+  static const Freelancer = "Freelancer";
+  static const seller = "Seller";
+  static const signin = "Sign In";
+  static const Signuptocontinue = "Sign up to continue";
+  static const ForgotPassword = "Forgot Password?";
+  static const Signintocontinue = "Sign in to continue";
+  static const Donthaveanaccount = "Don’t have an account? ";
+  static const ortext = "OR";
+  static const Register = "Register";
+  static const login = "Login";
+  static const signup = "Sign Up";
+  static const createAccount = "Create an account";
+  // profile information strings
+  static const PersonalInformation = "Personal Information";
+  static const MyStoreInformation = "My Store Information";
+  static const DocumentVerification = "Document Verification";
+  static const BankAccountVerification = "Bank Account Verification";
+  static const BusinessVerification = "Business Verification";
+  static const Text = "text";
+  static const done = "Done";
+  static const ApplyforProfile = "Apply for Profile";
+  static const fillalldetails = "Fill All details to activate your Store";
+  static const fullname = "Full Name";
+  static const address = "Address";
+  static const phoneNo = "Phone No.";
+  static const email = "Email";
+  static const cnic = "CNIC";
+  static const cnicFrontImage = "CNIC Front Image";
+  static const cnicBackImage = "CNIC Back Image";
+  static const enterhere = "Enter Here";
+  static const select = "Select";
+  static const storename = "Store Name";
+  static const storetype = "Type";
+  static const storephoneNo = "Phone Number";
+  static const bankaccountnumber = "Bank Account Number";
+  static const bankname = "Bank Name";
+  static const bankbranch = "Bank Branch";
+  static const accounttitle = "Account Title";
+  static const country = "Country";
+  static const provinceregion = "Province / Region";
+  static const city = "City";
+  static const zipcode = "Zip Code";
+  static const pinlocation = "Pin Location";
+  static const reason = "Reason";
+  static const reasontext =
+      "Lorem Ipsum is basically just dummy text that is latin...";
+  static const accounttype = "Account Type";
+  static const branchcode = "Branch Code";
+  static const branchname = "Branch Name";
+  static const branchphone = "Branch Phone";
+  static const accountnumber = "Account Number";
+  static const businessname = "Business Name";
+  static const ibannumber = "IBAN Number";
+  static const canceledcheque = "Canceled Cheque";
+  static const verificationletter = "Verification Letter (Optional)";
+  static const registrationnumber = "Registration Number";
+  static const taxnumber = "Phone Number";
+  static const letterhead = "Letter Head";
+  static const stamp = "Stamp (Optional)";
+  static const mystore = "My Store";
+  static const inreview = "In-review";
+  static const reviewtext = "Fill this form if your business registered.";
+  static const editdetails = "Edit Details";
+  static const startstore = "Start Store";
+  static const logout = "Logout";
+
+  /// dashboard screen
+  static const dashboard = "Dashboard";
+  static const products = "Products";
+  static const orders = "Orders";
+  static const menu = "menu";
+  static const allproducts = "All Products";
+  static const boostedproducts = "Boosted Products";
+  static const searchproduct = "Search Product";
+  static const allorders = "All Orders";
+  static const wholesaleorders = "Wholesale Orders";
+  static const editprofile = "Edit Profile";
+  static const settings = "Settings";
+  static const returnorders = "Return Orders";
+  static const sellerproducts = "Other Seller Products ";
+  static const purchases = "Purchases";
+  static const inquiries = "Inquiries";
+  static const queries = "Queries";
+  static const salereport = "Sale Report";
+  static const boostproducts = "Boost Products";
+  static const topsellingproducts = "Top Selling Products";
+  static const sr="Sr.";
+  static const product="Product";
+  static const itemsold ="Item Sold";
+  static const uploadproductimages ="Upload Product Images";
+  static const note ="Note: For best quality, upload images with a resolution of .";
+  static const spantext ="1080 × 1080 pixels";
+
+
+
+}
