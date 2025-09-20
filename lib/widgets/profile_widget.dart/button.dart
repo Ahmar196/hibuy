@@ -27,7 +27,7 @@ class ReusableButton extends StatelessWidget {
         style: TextButton.styleFrom(
           padding: EdgeInsets.symmetric(
             vertical: context.heightPct(0.012), // ~10px
-            horizontal: context.widthPct(0.40), // ~152px
+            //horizontal: context.widthPct(0.40), // ~152px
           ),
         ),
         onPressed: onPressed,

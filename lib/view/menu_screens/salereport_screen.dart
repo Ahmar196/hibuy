@@ -5,23 +5,133 @@ import 'package:hibuy/res/assets/image_assets.dart';
 import 'package:hibuy/res/colors/app_color.dart';
 import 'package:hibuy/res/media_querry/media_query.dart';
 import 'package:hibuy/res/text_style.dart';
+import 'package:hibuy/widgets/profile_widget.dart/app_bar.dart';
+import 'package:hibuy/widgets/profile_widget.dart/button.dart';
+import 'package:hibuy/widgets/profile_widget.dart/text_field.dart';
 
-class OrderScreen extends StatelessWidget {
-  const OrderScreen({super.key});
+class SalereportScreen extends StatelessWidget {
+  const SalereportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
+      appBar: const CustomAppBar(
+        title: AppStrings.salereport,
+        previousPageTitle: "Back",
+      ),
       body: Padding(
         padding: EdgeInsets.only(
-          left: context.widthPct(17 / 375), // instead of 17
+          left: context.widthPct(17 / 375),
           right: context.widthPct(17 / 375),
-          top: context.heightPct(58 / 812), // instead of 58
+          // top: context.heightPct(58 / 812),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /// Top Tabs
+            SizedBox(height: context.heightPct(12 / 812)),
+            ReusableTextField(
+              hintText: AppStrings.select,
+              labelText: AppStrings.orderStatus,
+              trailingIcon: Icons.expand_more,
+            ),
+            SizedBox(height: context.heightPct(12 / 812)),
+
+            // ✅ Row with two textfields
+            Row(
+              children: [
+                Expanded(
+                  child: ReusableTextField(
+                    hintText: AppStrings.date,
+                    labelText: AppStrings.from,
+                  ),
+                ),
+                SizedBox(width: context.widthPct(13 / 375)),
+                Expanded(
+                  child: ReusableTextField(
+                    hintText: AppStrings.date,
+                    labelText: AppStrings.to,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: context.heightPct(12 / 812)),
+            ReusableButton(
+              text: AppStrings.applyfilters,
+              onPressed: () {
+                // Navigator.pushNamed(context, RoutesName.BusinessVerification);
+              },
+            ),
+            SizedBox(height: context.heightPct(15 / 812)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: AppColors.stroke, width: 1),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: context.widthPct(10 / 375),
+                        vertical: context.heightPct(9 / 812),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            AppStrings.totalorders,
+                            style: AppTextStyles.cardtext(context),
+                          ),
+                          SizedBox(height: context.heightPct(4 / 812)),
+                          Text("100", style: AppTextStyles.linktext(context)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: AppColors.stroke, width: 1),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: context.widthPct(10 / 375),
+                        vertical: context.heightPct(9 / 812),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            AppStrings.totalamount,
+                            style: AppTextStyles.cardtext(context),
+                          ),
+                          SizedBox(height: context.heightPct(4 / 812)),
+                          Text(
+                            "Rs. 0000 | Rs. 0000",
+                            style: AppTextStyles.linktext(context),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: context.heightPct(16 / 812)),
+            SizedBox(
+              child: Text(
+                AppStrings.orderslist,
+                textAlign: TextAlign.start,
+                style: AppTextStyles.bold4(context),
+              ),
+            ),
+            SizedBox(height: context.heightPct(12 / 812)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -57,7 +167,7 @@ class OrderScreen extends StatelessWidget {
                 ),
               ],
             ),
-            
+
             SizedBox(height: context.heightPct(12 / 812)),
 
             /// Search Bar
@@ -269,7 +379,6 @@ class OrderScreen extends StatelessWidget {
           ],
         ),
       ),
-    
     );
   }
 }

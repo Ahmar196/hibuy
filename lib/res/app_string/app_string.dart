@@ -61,6 +61,8 @@ class AppStrings {
   static const verificationletter = "Verification Letter (Optional)";
   static const registrationnumber = "Registration Number";
   static const taxnumber = "Phone Number";
+   static const shophome = "Shop / Home Bill";
+    static const shopvideo = "Shop Video (Optional)";
   static const letterhead = "Letter Head";
   static const stamp = "Stamp (Optional)";
   static const mystore = "My Store";
@@ -90,13 +92,52 @@ class AppStrings {
   static const salereport = "Sale Report";
   static const boostproducts = "Boost Products";
   static const topsellingproducts = "Top Selling Products";
-  static const sr="Sr.";
-  static const product="Product";
-  static const itemsold ="Item Sold";
-  static const uploadproductimages ="Upload Product Images";
-  static const note ="Note: For best quality, upload images with a resolution of .";
-  static const spantext ="1080 × 1080 pixels";
-
-
-
+  static const sr = "Sr.";
+  static const product = "Product";
+  static const itemsold = "Item Sold";
+  static const uploadproductimages = "Upload Product Images";
+  static const note =
+      "Note: For best quality, upload images with a resolution of .";
+  static const spantext = "1080 × 1080 pixels";
+  static const addproduct = "Add Product";
+  static const title = "Title";
+  static const description = "Description";
+  static const brand = "Brand";
+  static const category = "Category";
+  static const purchaseprice = "Purchase Price";
+  static const productprice = "Product Price";
+  static const discount = "Discount (%)";
+  static const discountedprice = "Discounted Price";
+  static const variants = "Variants";
+  static const addoption = "+ Add options like size or color";
+  static const color = "Color";
+  static const blue = "1Blue";
+  static const green = "Green";
+  static const size = "size";
+  static const large = "Large";
+  static const medium = "Medium";
+  static const tags = "Tags";
+  static const banner = "Banner";
+  static const max2mb = "Max 2MB and Size should be 1280*720";
+  static const post = "Posts";
+  static const eachpost = "Each post should be 1080 * 1080";
+  static const productdetail = "Product Detail";
+  static const currentpassword = "Current Password";
+  static const newpassword = "New Password";
+  static const reenternewpassword = "Re-Enter New Password ";
+  static const referralid ="Referral ID";
+  static const referrallink ="Referral Link";
+  static const invitefriends ="Invite Friends";
+  static const benefitsyouwillget = "Benefits you will get:";
+  static const accountdetails = "Account Details";
+  static const bankdetails = "Send 20% Payment in the following Bank Account:";
+  static const uploadpaymentproof = "Attach screenshot after sending payment.";
+  static const orderStatus = "Order Status";
+  static const from = "From";
+  static const to = "To";
+  static const  date = "mm/dd/yyyy";
+  static const applyfilters = "Apply Filters";
+  static const totalorders = "Total Orders";
+  static const totalamount = "Total Amount";
+  static const orderslist = " Orders List";
 }

@@ -39,7 +39,7 @@ class ReusableCircleImage extends StatelessWidget {
             height: context.heightPct(0.0313),
             child: SvgPicture.asset(
               imagePath,
-              fit: fit,
+              fit: BoxFit.contain,
             ),
           ),
         ),

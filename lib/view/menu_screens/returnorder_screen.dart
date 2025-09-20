@@ -5,59 +5,27 @@ import 'package:hibuy/res/assets/image_assets.dart';
 import 'package:hibuy/res/colors/app_color.dart';
 import 'package:hibuy/res/media_querry/media_query.dart';
 import 'package:hibuy/res/text_style.dart';
+import 'package:hibuy/widgets/profile_widget.dart/app_bar.dart';
 
-class OrderScreen extends StatelessWidget {
-  const OrderScreen({super.key});
+class ReturnorderScreen extends StatelessWidget {
+  const ReturnorderScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      body: Padding(
+       appBar: const CustomAppBar(
+        title: AppStrings.returnorders,
+        previousPageTitle: "Back",
+      ),
+      body:  Padding(
         padding: EdgeInsets.only(
-          left: context.widthPct(17 / 375), // instead of 17
+          left: context.widthPct(17 / 375), 
           right: context.widthPct(17 / 375),
-          top: context.heightPct(58 / 812), // instead of 58
+         // top: context.heightPct(58 / 812), 
         ),
         child: Column(
           children: [
-            /// Top Tabs
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: context.widthPct(160 / 375), // instead of 160
-                  height: context.heightPct(22 / 812), // instead of 22
-                  decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppColors.stroke, width: 1),
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppStrings.allorders,
-                      style: AppTextStyles.allproducts(context),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: context.widthPct(160 / 375),
-                  height: context.heightPct(22 / 812),
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppColors.stroke, width: 1),
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppStrings.wholesaleorders,
-                      style: AppTextStyles.boostedproducts(context),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            
             SizedBox(height: context.heightPct(12 / 812)),
 
             /// Search Bar

@@ -103,92 +103,97 @@ class ProductScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: context.heightPct(20 / 812)),
-            Container(
-              width: double.maxFinite,
-              height: context.heightPct(91.92 / 812),
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: AppColors.stroke, width: 1),
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: context.widthPct(9.82 / 375),
-                  vertical: context.heightPct(11.22 / 812),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RoutesName.productdetailscreen);
+              },
+              child: Container(
+                width: double.maxFinite,
+                height: context.heightPct(91.92 / 812),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: AppColors.stroke, width: 1),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Image.asset("assets/dashboard/image 635.png"),
-                    SizedBox(width: context.widthPct(7 / 375)),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: context.widthPct(172 / 375),
-                          height: context.heightPct(36 / 812),
-                          child: Text(
-                            'Lorem ipsum dolor sit dolor  ipsum dolor sit ...',
-                            style: AppTextStyles.samibold3(context),
-                          ),
-                        ),
-                        SizedBox(
-                          child: Text(
-                            "Category 7",
-                            style: AppTextStyles.regular2(context),
-                          ),
-                        ),
-                        SizedBox(height: context.heightPct(4 / 812)),
-                        SizedBox(
-                          child: Text(
-                            "\$930",
-                            style: AppTextStyles.samibold3(context),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.more_vert,
-                          size: context.widthPct(15 / 375),
-                          color: AppColors.black,
-                        ),
-
-                        SizedBox(height: context.heightPct(6 / 812)),
-                        Container(
-                          width: context.widthPct(52.62 / 375),
-                          height: context.heightPct(16.84 / 812),
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryColor,
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: Center(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: context.widthPct(9.82 / 375),
+                    vertical: context.heightPct(11.22 / 812),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/dashboard/image 635.png"),
+                      SizedBox(width: context.widthPct(7 / 375)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: context.widthPct(172 / 375),
+                            height: context.heightPct(36 / 812),
                             child: Text(
-                              "boosted",
-                              style: AppTextStyles.medium(context),
+                              'Lorem ipsum dolor sit dolor  ipsum dolor sit ...',
+                              style: AppTextStyles.samibold3(context),
                             ),
                           ),
-                        ),
-                        SizedBox(height: context.heightPct(7.72 / 812)),
-                        Container(
-                          width: context.widthPct(52.62 / 375),
-                          height: context.heightPct(16.84 / 812),
-                          decoration: BoxDecoration(
-                            color: AppColors.green,
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: Center(
+                          SizedBox(
                             child: Text(
-                              "active",
-                              style: AppTextStyles.medium(context),
+                              "Category 7",
+                              style: AppTextStyles.regular2(context),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          SizedBox(height: context.heightPct(4 / 812)),
+                          SizedBox(
+                            child: Text(
+                              "\$930",
+                              style: AppTextStyles.samibold3(context),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Icon(
+                            Icons.more_vert,
+                            size: context.widthPct(15 / 375),
+                            color: AppColors.black,
+                          ),
+              
+                          SizedBox(height: context.heightPct(6 / 812)),
+                          Container(
+                            width: context.widthPct(52.62 / 375),
+                            height: context.heightPct(16.84 / 812),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryColor,
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "boosted",
+                                style: AppTextStyles.medium(context),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: context.heightPct(7.72 / 812)),
+                          Container(
+                            width: context.widthPct(52.62 / 375),
+                            height: context.heightPct(16.84 / 812),
+                            decoration: BoxDecoration(
+                              color: AppColors.green,
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "active",
+                                style: AppTextStyles.medium(context),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

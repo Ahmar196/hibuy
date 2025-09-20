@@ -32,6 +32,7 @@ class ReusableImageContainer extends StatelessWidget {
           color:  AppColors.bordercolor,
           width: context.widthPct(0.001), // ~0.3px
         ),
+        
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(context.widthPct(0.015)),
@@ -41,7 +42,7 @@ class ReusableImageContainer extends StatelessWidget {
               height: context.heightPct(0.0313),
             child: SvgPicture.asset(
               imagePath,
-              fit: fit,
+              fit: BoxFit.contain,
             ),
           ),
         ),

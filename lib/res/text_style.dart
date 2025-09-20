@@ -32,6 +32,13 @@ class AppTextStyles {
     letterSpacing: 0.5,
     color: AppColors.secondry,
   );
+  static TextStyle bold4(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w700,
+    fontSize: context.scaledFont(12),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.secondry,
+  );
   static TextStyle buttontext(BuildContext context) => GoogleFonts.poppins(
     fontWeight: FontWeight.w700,
     fontSize: context.scaledFont(14),
@@ -60,6 +67,13 @@ class AppTextStyles {
     letterSpacing: 0.5,
     color: AppColors.textspan,
   );
+  static TextStyle normal(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: context.scaledFont(12),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.textspan.withOpacity(0.50),
+  );
   static TextStyle greytext(BuildContext context) => GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
     fontSize: context.scaledFont(12),
@@ -80,6 +94,13 @@ class AppTextStyles {
     height: 1.5,
     letterSpacing: 0.5,
     color: AppColors.black,
+  );
+  static TextStyle samibold5(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w600,
+    fontSize: context.scaledFont(19),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.red,
   );
   static TextStyle greytext2(BuildContext context) => GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
@@ -186,6 +207,13 @@ class AppTextStyles {
     letterSpacing: 0.5,
     color: AppColors.secondry,
   );
+  static TextStyle medium4(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: context.scaledFont(14),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.secondry.withOpacity(0.50),
+  );
   static TextStyle heading(BuildContext context) => GoogleFonts.poppins(
     fontWeight: FontWeight.w700,
     fontSize: context.scaledFont(14),
@@ -200,11 +228,53 @@ class AppTextStyles {
     letterSpacing: 0.5,
     color: AppColors.black,
   );
-    static TextStyle regular5(BuildContext context) => GoogleFonts.poppins(
+  static TextStyle regular5(BuildContext context) => GoogleFonts.poppins(
     fontWeight: FontWeight.w400,
     fontSize: context.scaledFont(9),
     height: 1.5,
     letterSpacing: 0.5,
-    color: AppColors.secondry);
-  
+    color: AppColors.secondry,
+  );
+  static TextStyle settingtab(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w700,
+    fontSize: context.scaledFont(10),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.secondry,
+  );
+  static TextStyle referal(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: context.scaledFont(12),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.dark,
+  );
+    static TextStyle medium5(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: context.scaledFont(13),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.black,
+  );
+      static TextStyle medium6(BuildContext context) => GoogleFonts.roboto(
+    fontWeight: FontWeight.w500,
+    fontSize: context.scaledFont(13),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.black,
+  );
+    static TextStyle boldlato(BuildContext context) => GoogleFonts.lato(
+    fontWeight: FontWeight.w700,
+    fontSize: context.scaledFont(14),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.black4,
+  );
+     static TextStyle medium7(BuildContext context) => GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: context.scaledFont(12),
+    height: 1.5,
+    letterSpacing: 0.5,
+    color: AppColors.black4,
+  );
 }

@@ -100,7 +100,7 @@ class StoreInfoScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(
                   context,
-                  RoutesName.BankAccountVerification,
+                  RoutesName.DocumentVerification,
                 );
               },
             ),

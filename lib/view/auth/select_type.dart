@@ -69,28 +69,30 @@ class SelectType extends StatelessWidget {
       onTap: () {
          Navigator.pushNamed(context, RoutesName.SigninScreen);
       },
-      child: Container(
-        height: context.heightPct(231 / 812),
-        width: context.widthPct(225 / 375),
-        decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(context.widthPct(18 / 375)),
-          border: Border.all(
-            color: AppColors.gray,
-            width: context.widthPct(3 / 375),
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              image,
-              height: context.heightPct(97.5 / 812),
-              width: context.widthPct(97.5 / 375),
+      child: Flexible(
+        child: Container(
+         // height: context.heightPct(231 / 812),
+          width: context.widthPct(225 / 375),
+          decoration: BoxDecoration(
+            color: AppColors.white,
+            borderRadius: BorderRadius.circular(context.widthPct(18 / 375)),
+            border: Border.all(
+              color: AppColors.gray,
+              width: context.widthPct(3 / 375),
             ),
-            SizedBox(height: context.heightPct(0.03)),
-            Text(text, style: AppTextStyles.h4(context)),
-          ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                image,
+                height: context.heightPct(97.5 / 812),
+                width: context.widthPct(97.5 / 375),
+              ),
+              SizedBox(height: context.heightPct(0.03)),
+              Text(text, style: AppTextStyles.h4(context)),
+            ],
+          ),
         ),
       ),
     );

@@ -37,147 +37,153 @@ class KycMain extends StatelessWidget {
               SizedBox(height: context.heightPct(0.01)),
 
               /// Steps container
-              Column(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    height: context.heightPct(0.73),
-                    padding: EdgeInsets.all(context.widthPct(19.0 / 375)),
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(context.widthPct(14.29 / 375)),
-                        topRight: Radius.circular(
-                          context.widthPct(14.29 / 375),
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      //height: context.heightPct(0.73),
+                      padding: EdgeInsets.all(context.widthPct(19.0 / 375)),
+                      decoration: BoxDecoration(
+                        color: AppColors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(context.widthPct(14.29 / 375)),
+                          topRight: Radius.circular(
+                            context.widthPct(14.29 / 375),
+                          ),
                         ),
                       ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            AppStrings.ApplyforProfile,
+                            style: AppTextStyles.h4(context),
+                          ),
+                          SizedBox(height: context.heightPct(0.025)),
+                
+                          /// Dynamic step list
+                          BlocBuilder<StepBloc, StepState>(
+                            builder: (context, state) {
+                              // Fetch steps data
+                              final steps = [
+                                {
+                                  "title": AppStrings.PersonalInformation,
+                                  "subtitle": AppStrings.Text,
+                                  "route": RoutesName.personalinformation,
+                                },
+                                {
+                                  "title": AppStrings.MyStoreInformation,
+                                  "subtitle": AppStrings.Text,
+                                  "route": RoutesName.MyStoreInformation,
+                                },
+                                {
+                                  "title": AppStrings.DocumentVerification,
+                                  "subtitle": AppStrings.Text,
+                                  "route": RoutesName.DocumentVerification,
+                                },
+                                {
+                                  "title": AppStrings.BankAccountVerification,
+                                  "subtitle": AppStrings.Text,
+                                  "route": RoutesName.BankAccountVerification,
+                                },
+                                {
+                                  "title": AppStrings.BusinessVerification,
+                                  "subtitle": AppStrings.Text,
+                                  "route": RoutesName.BusinessVerification,
+                                },
+                              ];
+                              // Set default value for selectedStep
+                              int selectedStep = 0;
+                              if (state is StepSelectedState) {
+                                selectedStep = state
+                                    .selectedStep; // Update if state is StepSelectedState
+                              }
+                              return Column(
+                                children: List.generate(steps.length, (index) {
+                                  bool isSelected =
+                                      state is StepSelectedState &&
+                                      state.selectedStep == index;
+                                  return StepTile(
+                                    index: index,
+                                    title: steps[index]["title"]!,
+                                    subtitle: steps[index]["subtitle"]!,
+                                    isSelected: selectedStep == index,
+                                    isCompleted: index < selectedStep,
+                                    isLast: index == steps.length - 1,
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                        context,
+                                        steps[index]["route"]!,
+                                      );
+                                      context.read<StepBloc>().add(
+                                        StepChangedEvent(index),
+                                      );
+                                    },
+                                  );
+                                }),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Stack(
+                      alignment: Alignment.center,
                       children: [
-                        Text(
-                          AppStrings.ApplyforProfile,
-                          style: AppTextStyles.h4(context),
+                        // Background container
+                        Flexible(
+                          child: Container(
+                            width: double.infinity,
+                            height: context.heightPct(57.1667 / 812),
+                            padding: EdgeInsets.only(
+                              top: context.heightPct(9.53 / 812),
+                              right: context.widthPct(19.06 / 375),
+                              bottom: context.heightPct(9.53 / 812),
+                              left: context.widthPct(19.06 / 375),
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.gray.withOpacity(0.50),
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(
+                                  context.widthPct(14.29 / 375),
+                                ),
+                                bottomRight: Radius.circular(
+                                  context.widthPct(14.29 / 375),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                        SizedBox(height: context.heightPct(0.025)),
-
-                        /// Dynamic step list
-                        BlocBuilder<StepBloc, StepState>(
-                          builder: (context, state) {
-                            // Fetch steps data
-                            final steps = [
-                              {
-                                "title": AppStrings.PersonalInformation,
-                                "subtitle": AppStrings.Text,
-                                "route": RoutesName.personalinformation,
-                              },
-                              {
-                                "title": AppStrings.MyStoreInformation,
-                                "subtitle": AppStrings.Text,
-                                "route": RoutesName.MyStoreInformation,
-                              },
-                              {
-                                "title": AppStrings.DocumentVerification,
-                                "subtitle": AppStrings.Text,
-                                "route": RoutesName.DocumentVerification,
-                              },
-                              {
-                                "title": AppStrings.BankAccountVerification,
-                                "subtitle": AppStrings.Text,
-                                "route": RoutesName.BankAccountVerification,
-                              },
-                              {
-                                "title": AppStrings.BusinessVerification,
-                                "subtitle": AppStrings.Text,
-                                "route": RoutesName.BusinessVerification,
-                              },
-                            ];
-                            // Set default value for selectedStep
-                            int selectedStep = 0;
-                            if (state is StepSelectedState) {
-                              selectedStep = state
-                                  .selectedStep; // Update if state is StepSelectedState
-                            }
-                            return Column(
-                              children: List.generate(steps.length, (index) {
-                                bool isSelected =
-                                    state is StepSelectedState &&
-                                    state.selectedStep == index;
-                                return StepTile(
-                                  index: index,
-                                  title: steps[index]["title"]!,
-                                  subtitle: steps[index]["subtitle"]!,
-                                  isSelected: selectedStep == index,
-                                  isCompleted: index < selectedStep,
-                                  isLast: index == steps.length - 1,
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                      context,
-                                      steps[index]["route"]!,
-                                    );
-                                    context.read<StepBloc>().add(
-                                      StepChangedEvent(index),
-                                    );
-                                  },
-                                );
-                              }),
-                            );
-                          },
+                
+                        // Second container in center
+                        Center(
+                          child: Flexible(
+                            child: Container(
+                              width: context.widthPct(264.17 / 375),
+                              //height: context.heightPct(38.11 / 812),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: context.widthPct(28.58 / 375),
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.gray.withOpacity(0.50),
+                                borderRadius: BorderRadius.circular(
+                                  context.widthPct(95.28 / 375),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  AppStrings.fillalldetails,
+                                  style: AppTextStyles.samibold(context),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      // Background container
-                      Container(
-                        width: double.infinity,
-                        height: context.heightPct(57.1667 / 812),
-                        padding: EdgeInsets.only(
-                          top: context.heightPct(9.53 / 812),
-                          right: context.widthPct(19.06 / 375),
-                          bottom: context.heightPct(9.53 / 812),
-                          left: context.widthPct(19.06 / 375),
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.gray.withOpacity(0.50),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(
-                              context.widthPct(14.29 / 375),
-                            ),
-                            bottomRight: Radius.circular(
-                              context.widthPct(14.29 / 375),
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      // Second container in center
-                      Center(
-                        child: Container(
-                          width: context.widthPct(264.17 / 375),
-                          height: context.heightPct(38.11 / 812),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: context.widthPct(28.58 / 375),
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppColors.gray.withOpacity(0.50),
-                            borderRadius: BorderRadius.circular(
-                              context.widthPct(95.28 / 375),
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              AppStrings.fillalldetails,
-                              style: AppTextStyles.samibold(context),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

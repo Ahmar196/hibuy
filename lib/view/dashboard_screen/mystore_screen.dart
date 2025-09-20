@@ -4,6 +4,7 @@ import 'package:hibuy/res/app_string/app_string.dart';
 import 'package:hibuy/res/assets/image_assets.dart';
 import 'package:hibuy/res/colors/app_color.dart';
 import 'package:hibuy/res/media_querry/media_query.dart';
+import 'package:hibuy/res/routes/routes_name.dart';
 import 'package:hibuy/res/text_style.dart';
 
 class MystoreScreen extends StatelessWidget {
@@ -25,17 +26,22 @@ class MystoreScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("My Store", style: AppTextStyles.bold2(context)),
-                Container(
-                  width: context.widthPct(119 / 375),
-                  height: context.heightPct(30 / 812),
-                  decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(35),
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppStrings.editprofile,
-                      style: AppTextStyles.medium2(context),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, RoutesName.editprofile);
+                  },
+                  child: Container(
+                    width: context.widthPct(119 / 375),
+                    height: context.heightPct(30 / 812),
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: Center(
+                      child: Text(
+                        AppStrings.editprofile,
+                        style: AppTextStyles.medium2(context),
+                      ),
                     ),
                   ),
                 ),
@@ -57,6 +63,7 @@ class MystoreScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                
                 Padding(
                   padding: EdgeInsets.only(
                     top: context.heightPct(8 / 812),

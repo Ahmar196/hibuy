@@ -29,6 +29,10 @@ class ImageAssets {
   static const String boost = 'assets/dashboard/boost.svg';
   static const String queries = 'assets/dashboard/queries.svg';
   static const String salereport = 'assets/dashboard/salereport.svg';
+  static const String edit = 'assets/dashboard/edit.svg';
+  static const String delete = 'assets/dashboard/delete.svg';
+  static const String referalfriend = 'assets/dashboard/refer_friend.svg';
+  static const String copyicon = 'assets/dashboard/copyicon.svg';
 
 
 }

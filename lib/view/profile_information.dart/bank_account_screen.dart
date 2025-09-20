@@ -9,7 +9,7 @@ import 'package:hibuy/res/text_style.dart';
 import 'package:hibuy/widgets/profile_widget.dart/app_bar.dart';
 import 'package:hibuy/widgets/profile_widget.dart/button.dart';
 import 'package:hibuy/widgets/profile_widget.dart/id_image.dart';
-import 'package:hibuy/widgets/profile_widget.dart/profile_image.dart';
+
 import 'package:hibuy/widgets/profile_widget.dart/text_field.dart';
 
 class BankAccountScreen extends StatelessWidget {
@@ -149,5 +149,6 @@ class BankAccountScreen extends StatelessWidget {
         ),
       ),
     );
+  
   }
 }

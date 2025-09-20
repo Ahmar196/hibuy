@@ -18,7 +18,7 @@ class PrimaryButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: context.widthPct(344 / 375),   // ~91.7% of screen width
+        width: double.infinity,
         height: context.heightPct(57 / 812),  // ~7% of screen height
         padding: EdgeInsets.all(context.widthPct(16 / 375)), // 16px → responsive
         decoration: BoxDecoration(
